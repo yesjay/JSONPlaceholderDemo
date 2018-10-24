@@ -1,0 +1,15 @@
+.form-user {
+  display: flex;
+  flex-direction: column;
+  .input-user {
+    width: 60%;
+    margin: auto;
+  }
+  .form-button--user {
+    display: flex;
+    justify-content: center;
+    .mat-raised-button {
+      margin: 10px;
+    }
+  }
+}

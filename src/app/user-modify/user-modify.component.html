@@ -1,0 +1,17 @@
+<mat-card>
+  <form class="form-user" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <mat-form-field class="input-user">
+      <input matInput placeholder="name" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="input-user">
+      <input matInput placeholder="phone" formControlName="phone">
+    </mat-form-field>
+    <mat-form-field class="input-user">
+      <input matInput placeholder="gender" formControlName="gender">
+    </mat-form-field>
+    <div class="form-button--user">
+      <button mat-raised-button color="primary" type="submit">comfirm</button>
+      <button mat-raised-button [routerLink]="['/home']">cancel</button>
+    </div>
+  </form>
+</mat-card>
