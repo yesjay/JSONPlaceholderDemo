@@ -17,11 +17,18 @@ export class UserService {
     return this.httpClient.get<Array<User>>('http://localhost:8000/user');
   }
 
-  get(id: any): Observable<User> {
+  get(id: number): Observable<User> {
     return this.httpClient.get<User>('http://localhost:8000/user/' + id);
   }
 
   modify(model: User): Observable<User> {
-    return this.httpClient.put<User>('http://localhost:8000/user/' + model.id, model)
+    return model.id ? 
+    this.httpClient.put<User>('http://localhost:8000/user/' + model.id, model):
+    this.httpClient.post<User>('http://localhost:8000/user/', model);
+    
+  }
+
+  delete(model: User): Observable<User> {
+    return this.httpClient.delete<User>('http://localhost:8000/user/' + model.id)
   }
 }

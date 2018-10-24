@@ -41,10 +41,18 @@ export class UserModifyComponent implements OnInit {
 
   onSubmit() {
     let data = this.formGroup.value;
-    data.id = this.model.id;
+    if (this.model) {
+      data.id = this.model.id;
+    }
     this.userService.modify(data).subscribe(() => {
       this.router.navigate(['home']);
     })
+  }
+
+  delete() {
+    this.userService.delete(this.model).subscribe(() => {
+      this.router.navigate(['home']);
+    });
   }
 
   private getType() {

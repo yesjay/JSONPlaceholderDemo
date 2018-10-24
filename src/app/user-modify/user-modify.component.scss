@@ -1,15 +1,30 @@
-.form-user {
-  display: flex;
-  flex-direction: column;
-  .input-user {
-    width: 60%;
-    margin: auto;
-  }
-  .form-button--user {
+.card--user-modify {
+  .user-modify--title {
     display: flex;
-    justify-content: center;
-    .mat-raised-button {
-      margin: 10px;
+    button {
+      margin: auto;
     }
   }
+  h2 {
+    text-align: center;
+  }
+  .form-user {
+    display: flex;
+    flex-direction: column;
+    .input-user {
+      width: 60%;
+      margin: auto;
+    }
+    .form-button--user {
+      display: flex;
+      justify-content: center;
+      .mat-raised-button {
+        margin: 10px;
+      }
+    }
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
 }

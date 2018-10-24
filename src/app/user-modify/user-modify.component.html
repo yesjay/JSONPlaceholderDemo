@@ -1,4 +1,11 @@
-<mat-card>
+<mat-card class="card--user-modify">
+  <div class="user-modify--title">  
+    <span class="spacer"></span>
+    <button *ngIf="type === 'modify'" mat-icon-button (click)="delete()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <h2>{{type}}</h2>
   <form class="form-user" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
     <mat-form-field class="input-user">
       <input matInput placeholder="name" formControlName="name">

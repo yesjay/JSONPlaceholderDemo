@@ -1,5 +1,10 @@
-<mat-card>
-  <h2>User manager</h2>
+<mat-card class="card--user-manager">
+  <div class="user-manager--title">
+    <h2>User manager</h2>
+    <span class="spacer"></span>
+    <button mat-raised-button [routerLink]="['../user/create']">add user</button>
+  </div>
+  
   <table mat-table [dataSource]="users">
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Name </th>
